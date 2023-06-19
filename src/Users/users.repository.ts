@@ -1,6 +1,6 @@
 import { inject, injectable } from 'inversify'
 import TYPES from '../Inversify/types'
-import { GenericRepository } from '../lib/generic.repository'
+import { GenericRepository } from '../domain/generic.repository'
 import { User } from './user.interface'
 
 interface UserRepository extends GenericRepository<User, number> {}

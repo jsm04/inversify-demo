@@ -17,7 +17,7 @@ export class Server {
 		this.#server.use(compress())
 	}
 
-	get getInstance() {
+	 getHTTPServer() {
 		return this.#server
 	}
 }

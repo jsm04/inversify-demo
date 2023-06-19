@@ -2,7 +2,6 @@
 import 'reflect-metadata'
 
 // App imports
-import express from 'express'
 import { InversifyExpressServer } from 'inversify-express-utils'
 import container from './Inversify/config'
 import { Server } from './server'
@@ -11,7 +10,7 @@ import { Server } from './server'
 import './Users/users.controller'
 
 // App
-const app = new Server().getInstance
+const app = new Server().getHTTPServer()
 
 const serverBuilder = new InversifyExpressServer(container, null, { rootPath: '/api' }, app)
 const appConfigured = serverBuilder.build()
